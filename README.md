@@ -1,5 +1,5 @@
 # Software-Defined Wireless Sensor Network 
-## by Benson Thong, Edgar Silerio, Jeffrey Spaulding, Edgar Rodriguez, Derek Mata, Christopher Yamada
+ by Benson Thong, Edgar Silerio, Jeffrey Spaulding, Edgar Rodriguez, Derek Mata, Christopher Yamada
 
 # System Diagram
 ![](pictures/Picture1.png)
