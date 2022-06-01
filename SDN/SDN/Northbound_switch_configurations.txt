@@ -1,0 +1,24 @@
+﻿Zodiac_FX# config
+Zodiac_FX(config)# show config
+
+
+-------------------------------------------------------------------------
+Configuration
+ Name: Zodiac_FX
+ MAC Address: 70:B3:D5:6C:D6:3B
+ IP Address: 192.168.1.101
+ Netmask: 255.255.255.0
+ Gateway: 134.71.199.1
+ OpenFlow Controller: 192.168.1.3
+ OpenFlow Port: 6633
+ Openflow Status: Enabled
+ Failstate: Secure
+ Force OpenFlow version: Disabled
+ EtherType Filtering: Disabled
+ Port Stats Interval: 1
+
+
+-------------------------------------------------------------------------
+
+
+Zodiac_FX(config)#
