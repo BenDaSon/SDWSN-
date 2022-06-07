@@ -1,0 +1,78 @@
+Cisco switch 
+===========================================================================================
+show running-config                                                                    
+show openflow switch 1 controller                                                      
+show ip interface brief or (show ip inter br) -> this shows vlan and NIC up or down    
+show openflow switch 1 -> shows all switch configurations                              
+show openflow switch 1 flows -> show flow                                              
+===========================================================================================
+
+Northbound switch
+documentation: https://forums.northboundnetworks.com/downloads/zodiac_fx/guides/ZodiacFX_UserGuide_0317.pdf
+===========================================================================================
+There are three modes:
+base(no need need to type)
+openflow
+config
+
+To enter a mode(base doesn't need to enter name in terminal):
+Type the mode name. 
+
+To exit a mode: 
+exit
+
+base mode:
+config - Enter the “config” context.
+openflow - Enter the “openflow” context.
+debug - Enter the “debug” context.
+show ports - Displays information about each ethernet port including state, VLAN membership 
+and traffic statistics.
+show status - Displays the current device status.
+show version - Display the firmware version.
+restart - Restarts the Zodiac FX.
+help - Display a list of available commands
+
+openflow mode: 
+show status - Displays the OpenFlow status.
+show flows - Displays a list of the currently installed flows.
+show meters - Displays a list of the currently configured meters and associated meter bands.
+enable - Enables the Openflow functionality. 
+disable - Disables the OpenFlow functionality.
+clear flows - Clears the flow tables.
+exit - Return the context back to the base level.
+
+config mode:
+save - Saves the current configuration to non-volatile memory.
+restart - Restarts the Zodiac FX. Any unsaved configurations will be lost.
+show config - Display the current device configuration.
+show vlans - Displays a list of the currently configured VLANs.
+set name <name> - Sets the device name. Maximum of 16 characters, entries will be truncated.
+set mac-address <mac address> - Sets the MAC address of the device. The MAC address 
+assigned to the device is located on a label on the underside of the device.
+set ip-address <ip address> - Sets the device IP address.
+set netmask <netmask> - Set the device netmask.
+set gateway <ip address> - Sets the default gateway of the device.
+set of-controller <ip address> - Sets the IP address the OpenFlow controller.
+set of-port <tcp port> - Sets the TCP port of the OpenFlow Controller.
+set failstate <secure|safe> - Sets the failstate of the Zodiac FX. When set to ‘secure’, all traffic 
+is blocked when contact with the controller is lost. When set to ‘safe’, existing flows will be 
+processed until they time out. The default configuration is ‘secure’.
+add vlan <vlan id> <vlan name> - Creates a new VLAN. Valid IDs are 1-4096 and names must 
+be less than 16 characters.
+delete vlan <vlan id> - Deletes an existing VLAN.
+set vlan-type <type> - Set the VAN to either ‘openflow' or ‘native’
+add vlan-port <vlan id> <port> - Assigns a ethernet port to the designated VLAN. A port can only 
+be a member of one VLAN.
+delete vlan-port <port> - Remove the named Ethernet port from a VLAN.
+factory reset - Configures and saves the configuration back to the factory test configuration, see 
+appendix A for details. Note: the MAC address is not reset and will remain at it’s current value and 
+a restart is required to apply the changes.
+set of-version <version(0|1|4)> - Sets the device to only connect to an controller using the 
+OpenFlow version specified. A value of 0 disables this function and allows the device to negotiate 
+the version.
+set ethertype-filter <enable|disable> - Enable or disable Ethertype filter functionality. When 
+enabled, Zodiac FX will ignore packets of a non-standard Ethertype.
+exit - Return the context back to the base level.
+
+NOTE: In order to see clients using NORTHBOUND SWITCH, you must set VLAN ID to be TAGGED(Trunked)! set vlan-tag <VlAN ID> tagged
+===========================================================================================
