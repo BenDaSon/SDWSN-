@@ -1,7 +1,0 @@
-VMware ESXI networking:
-
-1. Create a virtual switch
-2. Add uplink virtual network interface card(vmnicx) to the desired virtual switch you plan to use
-3. Create a port group(name it whatever it doesn't matter) and put the desired virtual switch ) 
-4. This port group will be put in the Network adapter of the virtual machine. 
-
